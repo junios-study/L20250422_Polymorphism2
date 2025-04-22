@@ -10,5 +10,7 @@ public:
 	virtual ~ABranch();
 
 	virtual void Use() override;
+
+	void Swing();
 };
 

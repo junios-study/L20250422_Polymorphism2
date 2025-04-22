@@ -11,3 +11,7 @@ AGarlic::~AGarlic()
 void AGarlic::Use()
 {
 }
+
+void AGarlic::Smell()
+{
+}

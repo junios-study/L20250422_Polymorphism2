@@ -7,5 +7,7 @@ public:
 	virtual ~AGarlic();
 
 	virtual void Use() override;
+
+	void Smell();
 };
 
