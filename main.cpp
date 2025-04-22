@@ -6,19 +6,55 @@
 #include "Milk.h"
 #include "Branch.h"
 #include "GalricMilk.h"
+class Numbers
+{
+public:
+	int GetNumber() const;
+	void SetNumber(const int& InNumber);
+
+	void ChangeNumber(int& InOutNumber);
+
+private:
+	int Number = 10;
+
+};
+
 
 int main()
 {
-	AInventory Inventory;
+	const float PI = 3.14f;
 
-	Inventory.AddItem(new ASweetFish());
-	Inventory.AddItem(new AMilk());
-	Inventory.AddItem(new ABranch());
-	Inventory.AddItem(new AHerb());
+	Numbers N;
+	int NewNumber = 20;
 
-	AGalricMilk Milk;
+	N.SetNumber(NewNumber);
 
-	Milk.Use();
+	int Gold = N.GetNumber();
+
+
 
 	return 0;
+}
+
+
+
+
+int Numbers::GetNumber() const
+{
+	int i = 10;
+	i = 20;
+
+	return Number;
+}
+
+
+void Numbers::ChangeNumber(int& InOutNumber)
+{
+	Number = InOutNumber;
+	InOutNumber = 20;
+}
+
+void Numbers::SetNumber(const int& InNumber)
+{
+	Number = InNumber;
 }
