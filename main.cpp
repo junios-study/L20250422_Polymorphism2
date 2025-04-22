@@ -6,10 +6,13 @@
 #include "Milk.h"
 #include "Branch.h"
 #include "GalricMilk.h"
+
+//내가 만들지만 다른 사람이 사용한다.
 class Numbers
 {
 public:
 	int GetNumber() const;
+//	const int GetNumber2();
 	void SetNumber(const int& InNumber);
 
 	void ChangeNumber(int& InOutNumber);
@@ -18,6 +21,16 @@ private:
 	int Number = 10;
 
 };
+
+
+
+//c++ style
+void Swap(int& A, int& B)
+{
+	int Temp = A;
+	A = B;
+	B = Temp;
+}
 
 
 int main()
@@ -29,7 +42,13 @@ int main()
 
 	N.SetNumber(NewNumber);
 
-	int Gold = N.GetNumber();
+	int A = 20;
+	int B = 30;
+	Swap(A, B);
+
+	std::cout << A << std::endl;
+	std::cout << B << std::endl;
+
 
 
 
@@ -46,6 +65,11 @@ int Numbers::GetNumber() const
 
 	return Number;
 }
+
+//const int Numbers::GetNumber2()
+//{
+//	return Number;
+//}
 
 
 void Numbers::ChangeNumber(int& InOutNumber)
